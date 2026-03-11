@@ -12,6 +12,9 @@ import {
   TrendingUp,
   Network,
   Briefcase,
+  BatteryPlus,
+  Scale,
+  Expand,
 } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
@@ -58,6 +61,25 @@ const services = [
     title: "Strategic Project Execution",
     subtitle: "Turning strategy into reality.",
     desc: "Structured program management, cross-ministry coordination, and investor alignment to deliver complex national programs.",
+  },
+  {
+    icon: BatteryPlus,
+    title: "Public Finance & Fiscal Systems",
+    subtitle: "Strengthening the financial architecture of governments.",
+    desc: "Economic transformation ultimately depends on the strength of a country’s public finance system. Governments must mobilize domestic revenue, allocate resources efficiently, and manage fiscal risks while maintaining investor confidence. Fort Knox Strategies advises ministries of finance and economic planning agencies on modernizing fiscal systems, strengthening public financial management, and designing sustainable financing frameworks for long-term development.",
+  },
+  {
+    icon: Scale,
+    title: "Institutional Execution & Government Operations",
+    subtitle: "Building institutions that can deliver at scale.",
+    desc: "Even the strongest national strategies can fail without capable institutions to execute them. Fort Knox Strategies works with governments to strengthen institutional structures, improve operational efficiency, and build delivery systems capable of managing complex national initiatives.",
+  },
+  {
+    icon: Expand,
+    title: "Strategic Market Entry & Global Expansion",
+    subtitle:
+      "Helping businesses navigate complex markets and unlock new growth.",
+    desc: "Companies expanding into emerging markets often face complex regulatory environments, fragmented capital markets, and institutional barriers that slow growth.",
   },
 ];
 
@@ -355,7 +377,7 @@ export function HomePage() {
                   {service.subtitle}
                 </p>
                 <p
-                  className="text-[#F5F6F8]/35"
+                  className="text-[#F5F6F8]/40 line-clamp-4"
                   style={{
                     fontFamily: "'Inter', sans-serif",
                     fontSize: "13px",
