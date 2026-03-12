@@ -12,9 +12,8 @@ import {
   TrendingUp,
   Network,
   Briefcase,
-  BatteryPlus,
-  Scale,
-  Expand,
+  Banknote,
+  Settings,
 } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
@@ -63,23 +62,23 @@ const services = [
     desc: "Structured program management, cross-ministry coordination, and investor alignment to deliver complex national programs.",
   },
   {
-    icon: BatteryPlus,
+    icon: Banknote,
     title: "Public Finance & Fiscal Systems",
     subtitle: "Strengthening the financial architecture of governments.",
-    desc: "Economic transformation ultimately depends on the strength of a country’s public finance system. Governments must mobilize domestic revenue, allocate resources efficiently, and manage fiscal risks while maintaining investor confidence. Fort Knox Strategies advises ministries of finance and economic planning agencies on modernizing fiscal systems, strengthening public financial management, and designing sustainable financing frameworks for long-term development.",
+    desc: "Advising ministries of finance on modernizing fiscal systems, strengthening public financial management, and designing sustainable financing frameworks for long-term development.",
   },
   {
-    icon: Scale,
+    icon: Settings,
     title: "Institutional Execution & Government Operations",
     subtitle: "Building institutions that can deliver at scale.",
     desc: "Even the strongest national strategies can fail without capable institutions to execute them. Fort Knox Strategies works with governments to strengthen institutional structures, improve operational efficiency, and build delivery systems capable of managing complex national initiatives.",
   },
   {
-    icon: Expand,
+    icon: TrendingUp,
     title: "Strategic Market Entry & Global Expansion",
     subtitle:
       "Helping businesses navigate complex markets and unlock new growth.",
-    desc: "Companies expanding into emerging markets often face complex regulatory environments, fragmented capital markets, and institutional barriers that slow growth.",
+    desc: "Strategic guidance on market entry, investment structuring, and partnerships with governments and local institutions in high-growth emerging markets.",
   },
 ];
 
@@ -334,7 +333,7 @@ export function HomePage() {
             </motion.h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#C8A96A]/10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-[#C8A96A]/10">
             {services.map((service, i) => (
               <motion.div
                 key={service.title}
@@ -377,7 +376,7 @@ export function HomePage() {
                   {service.subtitle}
                 </p>
                 <p
-                  className="text-[#F5F6F8]/40 line-clamp-4"
+                  className="text-[#F5F6F8]/35"
                   style={{
                     fontFamily: "'Inter', sans-serif",
                     fontSize: "13px",
@@ -452,9 +451,9 @@ export function HomePage() {
                 }}
                 className="relative"
               >
-                <div className="border-t-2 border-[#C8A96A]/50 pt-8">
+                <div className="border-t-2 border-[#C8A96A]/30 pt-8">
                   <span
-                    className="text-[#C8A96A]/70 block mb-4"
+                    className="text-[#C8A96A]/30 block mb-4"
                     style={{
                       fontFamily: "'Playfair Display', serif",
                       fontSize: "36px",
@@ -465,7 +464,7 @@ export function HomePage() {
                   </span>
                   <phase.icon
                     size={23}
-                    className="text-[#C8A96A]/70 mb-4"
+                    className="text-[#C8A96A]/50 mb-4"
                     strokeWidth={1.5}
                   />
                   <h3

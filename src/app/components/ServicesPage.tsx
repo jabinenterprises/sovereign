@@ -8,9 +8,12 @@ import {
   Target,
   ArrowRight,
   ChevronRight,
-  BatteryPlus,
-  Scale,
-  Expand,
+  Banknote,
+  Settings,
+  TrendingUp,
+  University,
+  Briefcase,
+  DollarSign,
 } from "lucide-react";
 
 const fadeUp: Variants = {
@@ -91,10 +94,10 @@ const services = [
     ],
   },
   {
-    icon: BatteryPlus,
+    icon: Banknote,
     title: "Public Finance & Fiscal Systems",
     subtitle: "Strengthening the financial architecture of governments.",
-    description: `Economic transformation ultimately depends on the strength of a country’s public finance system. Governments must mobilize domestic revenue, allocate resources efficiently, and manage fiscal risks while maintaining investor confidence. Fort Knox Strategies advises ministries of finance and economic planning agencies on modernizing fiscal systems, strengthening public financial management, and designing sustainable financing frameworks for long-term development.\n\nDrawing on decades of experience working with governments and development institutions across multiple regions, we help countries build fiscal systems that support growth while maintaining macroeconomic stability.`,
+    description: `Economic transformation ultimately depends on the strength of a country's public finance system. Governments must mobilize domestic revenue, allocate resources efficiently, and manage fiscal risks while maintaining investor confidence. Fort Knox Strategies advises ministries of finance and economic planning agencies on modernizing fiscal systems, strengthening public financial management, and designing sustainable financing frameworks for long-term development. Drawing on decades of experience working with governments and development institutions across multiple regions, we help countries build fiscal systems that support growth while maintaining macroeconomic stability.`,
     keyServices: [
       "Public financial management reform",
       "Fiscal decentralization and intergovernmental transfers",
@@ -104,11 +107,11 @@ const services = [
     ],
   },
   {
-    icon: Scale,
+    icon: Settings,
     title: "Institutional Execution & Government Operations",
     subtitle: "Building institutions that can deliver at scale.",
     description:
-      "Even the strongest national strategies can fail without capable institutions to execute them. Fort Knox Strategies works with governments to strengthen institutional structures, improve operational efficiency, and build delivery systems capable of managing complex national initiatives.\n\nWe help governments design the governance structures, coordination mechanisms, and operational systems required to translate national strategy into measurable results.",
+      "Even the strongest national strategies can fail without capable institutions to execute them. Fort Knox Strategies works with governments to strengthen institutional structures, improve operational efficiency, and build delivery systems capable of managing complex national initiatives. We help governments design the governance structures, coordination mechanisms, and operational systems required to translate national strategy into measurable results.",
     keyServices: [
       "Institutional reform and organizational design",
       "Government delivery units",
@@ -118,12 +121,12 @@ const services = [
     ],
   },
   {
-    icon: Expand,
+    icon: TrendingUp,
     title: "Strategic Market Entry & Global Expansion",
     subtitle:
       "Helping businesses navigate complex markets and unlock new growth.",
     description:
-      "Companies expanding into emerging markets often face complex regulatory environments, fragmented capital markets, and institutional barriers that slow growth. Fort Knox Strategies helps businesses navigate these challenges by providing strategic guidance on market entry, investment structuring, and partnerships with governments and local institutions.\n\nOur work focuses on enabling companies to scale responsibly and successfully in high-growth markets by aligning business strategy with national development priorities and local regulatory environments.\n\nFort Knox Strategies works with both international firms entering emerging markets and regional companies seeking to expand globally.",
+      "Companies expanding into emerging markets often face complex regulatory environments, fragmented capital markets, and institutional barriers that slow growth. Fort Knox Strategies helps businesses navigate these challenges by providing strategic guidance on market entry, investment structuring, and partnerships with governments and local institutions. Our work focuses on enabling companies to scale responsibly and successfully in high-growth markets by aligning business strategy with national development priorities and local regulatory environments. Fort Knox Strategies works with both international firms entering emerging markets and regional companies seeking to expand globally.",
     keyServices: [
       "Market entry strategy for emerging economies",
       "Investment structuring and cross-border expansion",
@@ -131,6 +134,33 @@ const services = [
       "Regulatory navigation and stakeholder engagement",
       "Operational structuring for regional growth",
     ],
+  },
+];
+
+const clients = [
+  {
+    icon: Landmark,
+    title: "National Governments",
+    description:
+      "Advising heads of state, ministries, and public institutions on national strategy, infrastructure development, and economic transformation.",
+  },
+  {
+    icon: University,
+    title: "Sovereign & Public Institutions",
+    description:
+      "Working with sovereign wealth funds, development agencies, and public sector organizations to structure investment programs and deliver national initiatives.",
+  },
+  {
+    icon: Briefcase,
+    title: "Strategic Corporations",
+    description:
+      "Advising companies operating in critical sectors such as infrastructure, technology, energy, and finance on government partnerships, market entry, and geopolitical strategy.",
+  },
+  {
+    icon: DollarSign,
+    title: "Global Investors, Family Offices & Strategic Capital",
+    description:
+      "Working with institutional investors, family offices, private equity firms, and development finance institutions to identify, structure, and deploy capital into high-impact national and infrastructure initiatives.",
   },
 ];
 
@@ -149,18 +179,31 @@ export function ServicesPage() {
         />
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
           <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-[#C8A96A]/60 tracking-[0] md:uppercase mb-6 block max-w-3xl"
+            className="text-[#C8A96A]/50 tracking-[0.4em] uppercase mb-6 block"
             style={{
               fontFamily: "'Inter', sans-serif",
-              fontSize: "14px",
-              fontWeight: "600",
+              fontSize: "10px",
+              opacity: 1,
+            }}
+          >
+            Strategic Advisory Pillars
+          </motion.span>
+          <motion.p
+            className="text-[#C8A96A]/70 max-w-3xl mb-8"
+            style={{
+              fontFamily: "'Playfair Display', serif",
+              fontSize: "clamp(1rem, 2vw, 1.25rem)",
+              lineHeight: 1.6,
+              fontStyle: "italic",
+              fontWeight: "400",
+              opacity: 1,
+              transform: "none",
             }}
           >
             Fort Knox Strategies is a sovereign advisory firm operating at the
             intersection of capital, geopolitics, and national transformation.
-          </motion.span>
+          </motion.p>
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -168,9 +211,11 @@ export function ServicesPage() {
             className="text-[#F5F6F8] max-w-3xl"
             style={{
               fontFamily: "'Playfair Display', serif",
-              fontSize: "clamp(1rem, 4vw, 1.5rem)",
-              lineHeight: 0.5,
+              fontSize: "clamp(2rem, 4vw, 3.2rem)",
+              lineHeight: 1.15,
               fontWeight: 400,
+              opacity: 1,
+              transform: "none",
             }}
           >
             What We Do
@@ -186,9 +231,10 @@ export function ServicesPage() {
               lineHeight: 1.9,
             }}
           >
-            Eight interconnected advisory pillars supporting governments and
-            organizations in designing strategy, mobilizing capital, and
-            executing transformational national and economic initiatives.
+            We partner with governments, businesses, and institutions to design
+            strategy, mobilize global capital, and execute transformational
+            economic and infrastructure programs that shape the future of
+            nations.
           </motion.p>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C8A96A]/20 to-transparent" />
@@ -213,7 +259,7 @@ export function ServicesPage() {
                 <div className="lg:col-span-2">
                   <motion.div variants={fadeUp}>
                     <span
-                      className="text-[#C8A96A]/70 block mb-4"
+                      className="text-[#C8A96A]/20 block mb-4"
                       style={{
                         fontFamily: "'Playfair Display', serif",
                         fontSize: "48px",
@@ -224,7 +270,7 @@ export function ServicesPage() {
                     </span>
                     <service.icon
                       size={28}
-                      className="text-[#C8A96A]/60"
+                      className="text-[#C8A96A]/50"
                       strokeWidth={1}
                     />
                   </motion.div>
@@ -307,8 +353,131 @@ export function ServicesPage() {
         </div>
       </section>
 
+      {/* How We Work */}
+      <section className="bg-[#0A1A2F] py-24 lg:py-32 relative overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-[0.015]"
+          // style="background-image: radial-gradient(circle at 20% 30%, rgb(200, 169, 106) 0.5px, transparent 0.5px), radial-gradient(circle at 80% 70%, rgb(200, 169, 106) 0.5px, transparent 0.5px), linear-gradient(rgb(200, 169, 106) 0.5px, transparent 0.5px), linear-gradient(90deg, rgb(200, 169, 106) 0.5px, transparent 0.5px); background-size: 200px 200px, 200px 200px, 80px 80px, 80px 80px;"
+          style={{
+            backgroundImage:
+              "'radial-gradient(circle at 20% 30%, rgb(200, 169, 106) 0.5px, transparent 0.5px), radial-gradient(circle at 80% 70%, rgb(200, 169, 106) 0.5px, transparent 0.5px), linear-gradient(rgb(200, 169, 106) 0.5px, transparent 0.5px), linear-gradient(90deg, rgb(200, 169, 106) 0.5px, transparent 0.5px)'",
+            backgroundSize: "200px 200px, 200px 200px, 80px 80px, 80px 80px",
+          }}
+        ></div>
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C8A96A]/15 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C8A96A]/15 to-transparent"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
+          <div>
+            <span
+              className="text-[#C8A96A]/50 tracking-[0.4em] uppercase mb-6 block"
+              // style="font-family: Inter, sans-serif; font-size: 10px; opacity: 1; transform: none;"
+              style={{
+                fontFamily: "'Inter', sans-serif",
+                fontSize: "10px",
+                opacity: 1,
+                transform: "none",
+              }}
+            >
+              Our Clientele
+            </span>
+            <h2
+              className="text-[#F5F6F8] mb-6"
+              // style='font-family: "Playfair Display", serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); line-height: 1.15; font-weight: 400; opacity: 1; transform: none;'
+              style={{
+                fontFamily: "'Playfair Display', serif",
+                fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)",
+                lineHeight: 1.15,
+                fontWeight: 400,
+                opacity: 1,
+                transform: "none",
+              }}
+            >
+              Who We Work With
+            </h2>
+            <p
+              className="text-[#F5F6F8]/40 max-w-3xl mb-16"
+              // style="font-family: Inter, sans-serif; font-size: 14px; line-height: 1.9; opacity: 1; transform: none;"
+              style={{
+                fontFamily: "'Inter', sans-serif",
+                fontSize: "14px",
+                lineHeight: 1.9,
+                opacity: 1,
+                transform: "none",
+              }}
+            >
+              Fort Knox Strategies works with governments, institutions, and
+              strategic organizations seeking to unlock investment, navigate
+              geopolitical complexity, and execute transformational national and
+              economic initiatives.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-[#C8A96A]/8">
+              {clients.map((client, i) => (
+                <div
+                  className="bg-[#0A1A2F] p-8 lg:p-10 group hover:bg-[#0D2240] transition-colors duration-500 relative"
+                  style={{ opacity: 1, transform: "none" }}
+                >
+                  <div className="absolute top-0 left-8 right-8 h-px bg-[#C8A96A]/10 group-hover:bg-[#C8A96A]/25 transition-colors duration-500"></div>
+                  {/* <client.icon
+                    size={24}
+                    className="absolute top-0 left-8 right-8 h-px bg-[#C8A96A]/10 group-hover:bg-[#C8A96A]/25 transition-colors duration-500"
+                  /> */}
+                  <client.icon
+                    size={28}
+                    className="text-[#C8A96A]/50 transition-colors duration-500"
+                    style={{
+                      marginBottom: "calc(0.25rem * 6)",
+                    }}
+                    strokeWidth={1}
+                  />
+
+                  <motion.h3
+                    variants={fadeUp}
+                    className="text-[#F5F6F8]/90 mb-4"
+                    style={{
+                      fontFamily: "'Playfair Display', serif",
+                      fontSize: "18px",
+                      fontWeight: 400,
+                      lineHeight: 1.35,
+                    }}
+                  >
+                    {client.title}
+                  </motion.h3>
+                  <motion.p
+                    variants={fadeUp}
+                    className="text-[#F5F6F8]/30 group-hover:text-[#F5F6F8]/45 transition-colors duration-500"
+                    style={{
+                      fontFamily: "'Inter', sans-serif",
+                      fontSize: "13px",
+                      lineHeight: 1.8,
+                    }}
+                  >
+                    {client.description}
+                  </motion.p>
+                </div>
+              ))}
+            </div>
+            <p
+              className="text-[#F5F6F8]/25 max-w-3xl mt-12 text-center mx-auto"
+              style={{
+                fontFamily: "'Inter', sans-serif",
+                fontSize: "12px",
+                lineHeight: 1.9,
+                fontStyle: "italic",
+                opacity: 1,
+                transform: "none",
+              }}
+            >
+              These partnerships enable the mobilization of long-term investment
+              into strategic sectors, including infrastructure, energy, digital
+              systems, defence, artificial intelligence, logistics, and national
+              development programs.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
-      <section className="py-20 bg-[#0A1A2F]">
+      <section className="py-20 bg-[#2E3A4A]">
         <div className="max-w-3xl mx-auto px-6 lg:px-12 text-center">
           <motion.div
             initial="hidden"
@@ -337,7 +506,7 @@ export function ServicesPage() {
                   fontWeight: 500,
                 }}
               >
-                Begin a Strategic Dialogue
+                Engage With Fort Knox Strategies
                 <ArrowRight
                   size={14}
                   className="group-hover:translate-x-1 transition-transform"
