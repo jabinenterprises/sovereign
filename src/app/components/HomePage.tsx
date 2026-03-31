@@ -16,6 +16,7 @@ import {
   Settings,
 } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+// import {pic} from "@/assets/aZndAMFoBIGEgnjo_AdobeStock_1686125010.jpeg"
 
 const heroImage =
   "https://images.unsplash.com/photo-1626695436755-3e288720849c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhbmNpZW50JTIwQWZyaWNhJTIwdHJhZGUlMjByb3V0ZXMlMjBtYXAlMjBoaXN0b3JpY2FsfGVufDF8fHx8MTc3Mjg2MjY3MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
@@ -602,7 +603,7 @@ export function HomePage() {
               className="relative order-2 lg:order-1"
             >
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1769771744699-7b73a101b318?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxleGVjdXRpdmUlMjBjb25mZXJlbmNlJTIwcm9vbSUyMGZvcm1hbCUyMG1lZXRpbmd8ZW58MXx8fHwxNzcyODYxNzM5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src="/images/aZndAMFoBIGEgnjo_AdobeStock_1686125010.jpeg"
                 alt="Strategic counsel"
                 className="w-full h-[400px] object-cover grayscale-[40%]"
               />
